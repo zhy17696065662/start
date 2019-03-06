@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol,li{
+            list-style: none;
+        }
+        body,html{
+            width: 100%;
+            height: 100%;
+        }
+        .wrapper{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            height: 44px;
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+        }
+        section{
+            height: 50px;
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+        }
+        .tops,.bottoms{
+            height: 44px;
+            width: 100%;
+            text-align: center;
+            line-height: 44px;
+            background: #eee;
+        }
+        
+        section ul{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        section ol{
+            width: 100%;
+            height: auto;
+            background: #fff;
+            display: none;
+            position: absolute;
+            z-index: 999;
+        }
+        section ol li{
+            height: 40px;
+            border-bottom: 1px solid #000;
+        }
+        .shade{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.3);
+            display: none;
+            z-index: 8;
+        }
+        footer{
+            position: relative;
+            width: 100%;
+            flex: 1;
+            overflow: hidden;
+            height: 640px;
+        }
+        .tops{
+            position: absolute;
+            top:-44px;
+        }
+        .bottoms{
+            position: absolute;
+            bottom: -44px;
+        }
+        footer>div{
+            position: relative;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        footer>div dl{
+            width: 100%;
+            height: auto;
+            display: flex;
+            border-bottom: 1px solid #000;
+        }
+        footer .htmls.bans{
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        footer>div dl.bans{
+            width: 50%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid #000;
+          
+        }
+        footer>div dl dt{
+            width: 150px;
+            height: 160px;
+        }
+        footer>div dl img{
+            width: 100%;
+            height: 100%;
+        }
+        footer>div dd{
+            padding: 20px 0;
+            flex: 1;
+        }
+        footer>div dd div{
+            margin-top: 50px;
+        }
+        footer>div dd div span{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+            <div class="shade"></div>
+        <header>
+            <input type="text" id="inp">
+            <button id="btn">搜索</button>
+        </header>
+        <section>
+            <ul class="ul">
+                <li class="synthesize">综合</li>
+                <li data-type='sales'>销量排序</li>
+                <li class="be">变形金刚</li>
+            </ul>
+            <ol class="ol">
+                <li data-type='up'>价格从上到下</li>
+                <li data-type='below'>价格从下到上</li>
+                <li data-type='credit'>信誉</li>
+            </ol>
+            
+        </section>
+        <footer>
+            <div class="abc">
+                <div class="tops">下拉刷新</div>
+                <div id="htmls" class="htmls">
+                    <!-- <dl>
+                    <dt>
+                        <img src="./img/a.png" alt="">
+                    </dt>
+                    <dd>
+                        <h3>飒飒就是垃圾数量卡接口连接大手机打开拉丝机</h3>
+                        <div>
+                            <p>
+                                <span>228</span>
+                                <span>2000人付款</span>
+                                <span>北京</span>
+                            </p>
+                        </div>
+                    </dd>
+                </dl> -->
+                </div>
+                <div class="bottoms">上拉加载</div>
+                
+                
+            </div>
+        </footer>
+    </div>
+    <script src="./js/libs/require.js" data-main="./js/page/index.js"></script>
+</body>
+</html>
